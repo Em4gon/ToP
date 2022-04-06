@@ -1,10 +1,37 @@
 body {
-    background-color: indianred;
+    background-color: rgb(240, 133, 169);
   }
 img {
     max-width: 200px;
 }
+.read, .unread {
+    /*color: white;
+    background-color: black;
+    */
+    border-block-color: yellow;
+    font-family:monospace;
+    font-size: large;
 
+    border-block: solid;
+    writing-mode: horizontal-tb;
+  }
+  
+ 
+.read.separador {
+    font-size: large;
+    color: chartreuse;
+}
+#titulo{
+    font-style: italic;
+    color: brown;
+    background-color: thistle;
+}
 .listas {
     color: whitesmoke;
+    font-size: small;
+}
+
+.parrafo-uno{ color:darkorange}
+.parrafo-dos{
+    background-color: aqua;
 }
