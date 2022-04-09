@@ -2,12 +2,27 @@ body {
     background-color: rgb(240, 133, 169);
   }
 img {
-    max-width: 200px;
+    height: auto;
+    /*max-width: 200px;*/
+    width: 300px;
 }
+  /* rule 2 */
+  .padre.hijo {
+    font-size: 10px;
+    color: yellow;
+}
+  .padre .hijo {
+    font-size: 69px;
+    color: green;
+  }
+
+
+  
+
 .read, .unread {
-    /*color: white;
+    color: white;
     background-color: black;
-    */
+    
     border-block-color: yellow;
     font-family:monospace;
     font-size: large;
@@ -16,7 +31,20 @@ img {
     writing-mode: horizontal-tb;
   }
   
- 
+.read .contents .cuatro .cinco{
+    /*background-color: aqua;*/
+    color: blueviolet;
+    
+    border-block: solid;
+    border-color: violet;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-style: italic;
+    font-weight: 999;
+}
+  
+
 .read.separador {
     font-size: large;
     color: chartreuse;
