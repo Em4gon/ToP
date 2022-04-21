@@ -70,4 +70,12 @@ ul {
   padding: 1em;
   }
       
+  .box4 span {
+    display:inline-block;
+    background-color: pink;
+      border: 5px solid black;
+      color:black;
+      padding: 1em;
+    
+    }
       
