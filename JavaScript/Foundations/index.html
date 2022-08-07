@@ -4,10 +4,396 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>hola</p>
-    <script src="./javascript.js"></script>
+    <p onClick="makeGreen()">xBREAKxDOWNx</p>
+    <script>
+        const dogs = [{name: 'Snickers', age:2},{name:'Hugo',age:8}];
+
+        function makeGreen(){
+            const p = document.querySelector('p');
+            p.style.color = '#BADA55';
+            p.style.fontSize = '50px';
+        }
+
+
+        //grouping together
+        dogs.forEach(dog => {
+    console.groupCollapsed(`${dog.name}`);
+    console.log(`This is ${dog.name}`);
+    console.log(`${dog.name} is ${dog.age} years old`);
+    console.log(`${dog.name} is ${dog.age * 7} dog years`);
+    console.groupEnd(`${dog.name}`);
+        });
+    console.table(dogs);
+    </script>
+    <div class="header">
+        <div class="topbar">
+            <div class="logo">Header Logo</div>
+                <ul class="header-links">
+                    <li> <a href="#">header link one</a></li>
+                    <li> <a href="#">header link two</a></li>
+                    <li> <a href="#">header link three</a></li>
+                </ul>
+        </div>
+        <div class="sub-header">
+            <div class="l-sub-header">
+                <div class="title" id="title">Hola Visitante! :)</div>
+                <p>This website has some subtext that goes here under the main title. Its a smaller font and the color is lower contrast
+                    <br>
+                    Fusce egestas dui nec mattis auctor. Praesent maximus placerat metus, a tristique enim lobortis ac. Sed pretium est a ligula tempus, quis bibendum arcu dictum. Vivamus rutrum lacinia elementum. Duis eget fringilla elit, congue vestibulum metus. Aliquam sodales quam lectus. Nulla cursus molestie egestas. Donec dignissim urna a magna efficitur luctus.
+                </p>
+                <button class="button">Sign up</button>
+            </div>
+            <div class="i   mg">
+                <img src="imgs/8571ndrcj5n71.jpg" alt="Jotaro hat">
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="title">Some random information.</div>
+        <div class="gallery">
+            <div class="elem">
+                <img src="./imgs/ava1.jpg" alt=".">
+                <div class="text">Duis et lectus eu odio blandit egestas. Suspendisse hendrerit tellus lobortis arcu porta, sagittis efficitur tortor consequat. Maecenas tempus pulvinar neque, vel sagittis diam accumsan non.</div>
+            </div>
+            <div class="elem">
+                <img src="./imgs/ava2.jpg" alt=".">
+                <div class="text">Suspendisse ultrices congue erat eget ultrices. Nujja at massa in nisi scelerisque ullamcorper.</div>
+            </div>
+            <div class="elem">
+                <img src="./imgs/ava3.jpg" alt=".">
+                <div class="text">Nujja posuere nujja et felis dignissim, vitae scelerisque odio cursus. Integer mollis lectus in ligula vulputate rutrum.</div>
+            </div>
+            <div class="elem">
+                <img src="./imgs/ava4.jpg" alt=".">
+                <div class="text">Sed pellentesque augue non aliquam scelerisque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="javascript1"> -->
+        <div class="javascript" id="java">
+
+        <p class="quote"><i>
+            <script>
+            for(let step=0; step<2;step++){
+            document.write(`.....................<br>`);
+            }
+        </script>
+                
+        </i> 
+        </p>
+        <br>
+        
+        <button id="javaBtn">Try it</button>
+        
+        <script src="./javascript2.js">
+        
+        </script>
+        <input type ="button" onclick="funcion2()" value="Funcion2">
+        
+        <input type ="button" onclick="funcion3(3)" value="Funcion3">
+        <p id="jsdemo"></p>
+
+        
+        
+    </div>
+
+    <div class="javascript">
+
+        <!-- <form id="form" onsubmit="return false;">
+            <input type="text" id="userInput" />
+            <input type="submit" onclick="othername();" />
+        </form> -->
+            <!-- --------------- -->
+        <form id='nameForm' onsubmit="return false;">
+            <div class='form-uname'>
+                <label id='nameLable' for='nameField'>Create a username:</label>
+                <input id='nameField' type='text' maxlength='25'></input>
+            </div>
+            <div class='form-sub'>
+                <button id='subButton' type='button' onclick="getUserName()">Print your name!</button>
+            </div>
+            </form>
+            <div>
+                <p id='result'></p>
+            </div>
+            <div>
+            <button id="reemplaza" type="button" onclick="replazar()">CAMBIA</button>
+        </div>
+            <div>
+                <p id="cambiaTEST">Please visit pepe, pepe, pepe and pepe-ro pepeNeitor
+                </p>
+        </div>
+    <!-- -------------------------------------------- -->
+        <div>
+            <p id="textoMAYMIN">
+                Habia una vez un perrito muy chiquito y bonito, se la pasaba todo el dia durmiendo
+            </p>
+            <div class='form-sub'>
+                <button id='cambiaTamanio' type='button' onclick="reverseCaps()">alterna Mayusculas!</button>
+            </div>
+        </div>
+        <div>
+            <p>Ingresa palabras</p>
+            <label>Palabras a concatenar:</label>
+            <input id='concatWord1' type='text' maxlength='25'></input>
+            <input id='concatWord2' type='text' maxlength='25'></input>
+            <button id='subButton' type='button' onclick="concatWords()">!</button>
+            <p id="concatWords"></p>
+        </div>
+
+        <div>
+            <label>String a usar "trim()"</label>
+            <input id="palabraTrim" type="text"></input>
+            <button onclick="trimPalabra()">!</button>
+            <p id="palabraTrimeada"></p>
+        </div>
+        <div>
+            <p>charAt()</p>
+            <label>Palabra a analizar</label><input id="palabraCharAt" type="text"></input>
+            <label>Posicion de la letra</label><input id="posicionCharAt" type="text"></input>
+            <button onclick="miCharAt()">!</button>
+            <p id="resCharAt"></p>
+        </div>
+        <div>
+            <p>split(separador)</p>
+            <label>Palabra a separar</label><input id="palabraSplit" type="text"></input>
+            <label>Separador</label><input id="separadorSplit" type="text"></input>
+            <button onclick="miSplit()">!</button>
+            <p id="resSplit"></p>
+        </div>
+        <div>
+            pROBANDO
+            <script>
+                /*
+                Uso del OR para imprimir mensajes de errores, puede ser util    
+                */
+               function chch(){
+                let txt;
+                return true;
+               }
+               chch()||alert("printed");
+            // Prueba del &&
+               if ((1 && 0)) { // evaluated as true && false
+                 alert( "won't work, because the result is falsy" );
+                }
+                // -----------
+                // alert( alert(1) || alert(2) || alert(3) );
+                // alert(1 && null && 2); esto da null
+            </script>
+            <br>
+            <button onclick="login()">Loguearse Mio</button>
+            <button onclick="login2()">Loguearse2</button>
+
+        </div>
+        <br>
+        <div>
+            <label for="weather">Select the weather type today: </label>
+            <select id="weather">
+            <option value="">--Make a choice--</option>
+            <option value="sunny">Sunny</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowing">Snowing</option>
+            <option value="overcast">Overcast</option>
+            </select>
+
+            
+            <p id="weatherText"></p>
+        </div>
+        <script>
+        const select = document.getElementById('weather');
+        // const select = document.querySelector('weather');
+        const para = document.getElementById('weatherText');
+        select.addEventListener('change', setWeather2);
+        </script>
+
+        <p>Escribe un numero y te lo trasformara a boolean</p>
+        <input id="ternaryTest" type="boolean"></input>
+        <p id="ternaryText"></p>
+        <p id="day_message"></p>
+        <script>
+            document.getElementById('ternaryTest').addEventListener('input', test77);
+            function test77(){
+            // const ternary = !!(Number(document.getElementById('ternaryTest').value));
+            const ternary = Boolean(Number(document.getElementById('ternaryTest').value));
+            let res = (ternary) ? 'es verdadero' : 'es falso';
+            document.getElementById('ternaryText').innerHTML = res;
+            }
+        </script>
+       
+        <script>
+          const day = new Date().getDay();
+            let day_message='';
+            switch (day) {  
+                case 0:
+                    day_message="It's Sunday, time to relax!";
+                    break;
+                case 1:
+                    day_message="Happy Monday!";
+                    break;
+                case 2:
+                    day_message="It's Tuesday. You got this!";
+                    break;
+                case 3:
+                    day_message="Hump day already!";
+                    break;
+                case 4:
+                    day_message="Just one more day 'til the weekend!";
+                    break;
+                case 5:
+                    day_message="Happy Friday!";
+                    break;
+                case 6:
+                    day_message="Have a wonderful Saturday!";
+                    break;
+                default:
+                    day_message="Something went horribly wrong...";
+            }       
+            document.getElementById("day_message").innerHTML = day_message;
+            document.getElementById("title").innerHTML = day_message;
+        </script>
+        <button id="bt_fun_rnd">Funcion, es menor que 10?</button>
+        <script>
+            console.log('A ver, probando el console log');
+            /**
+ * The code below tells the browser to ask you for a number
+ * then if that number is `6`, it returns `true` otherwise it returns `false`
+ * 
+ * Change this code so it returns `true` when the number is greater than or equal to 10, and false if it is less than 10
+ */         
+            // const button = document.querySelector('[id="bt_fun_rnd"]');
+            // or
+            // const button = document.getElementById("bt_fun_rnd");
+            function menorquediez() {
+            number = Number(prompt("enter a number"));
+         
+                if(number >= 10) {
+                    alert( "true");
+                } else {
+                    alert("false");
+                }
+            }
+            // button.addEventListener('click',menorquediez);
+            document.querySelector('[id="bt_fun_rnd"]').addEventListener('click',menorquediez);
+            
+        </script>
+    
+    
+
+
+        <input id="textBox">
+
+<script>
+    function logKey(event) {
+  console.log(`You pressed "${event.key}".`);
+}
+
+textBox.addEventListener('keydown', logKey);
+
+
+</script>
+
+
+<label for="message">Message</label>
+<input placeholder="Enter some text" id="message411" name="message">
+<p id="result411"></p>
+
+<script>
+    const message = document.querySelector('#message411');
+    const result = document.querySelector('#result411');
+    // const message = document.getElementById('message411');
+    // const result = document.getElementById('result411');
+
+    // message.addEventListener('input', function () {
+    //     result.textContent = this.value;
+    // });
+
+    document.getElementById('message411').addEventListener('input', test411);
+    function test411(){
+        // result.textContent = message.value;
+        let res = message.value;
+    document.getElementById('result411').innerHTML = res;
+    }
+
+    function hello(name='Chris') {
+  alert(`Hello ${name}!`);
+
+    
+}
+</script>
+
+    </div>
+    
+   
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+       
+       
+       
+       
+       
+        <div class="banner">
+            <div class="banner-text">
+            <div class="banner-title">Call to action! It's time</div>
+            Registrate a nuestro producto haciendo click aqui!
+            </div>
+            <div class="button">Registrarse</div>
+        </div>
+        </div>
+        <div class="footer">
+            Copyright The Odin Project 2022
+        </div>
+    </body>
 </body>
 </html>
