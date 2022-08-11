@@ -285,23 +285,13 @@
     
 
 
-        <input id="textBox">
-
-<script>
-    function logKey(event) {
-  console.log(`You pressed "${event.key}".`);
-}
-
-textBox.addEventListener('keydown', logKey);
-
-
-</script>
-
 
 <label for="message">Message</label>
 <input placeholder="Enter some text" id="message411" name="message">
 <p id="result411"></p>
 
+<button id='subButton' type='button' onclick="hello()">A quien debo saludar?!</button>
+<input id='nombresaludable' type='text' maxlength='25'></input>
 <script>
     const message = document.querySelector('#message411');
     const result = document.querySelector('#result411');
@@ -319,11 +309,39 @@ textBox.addEventListener('keydown', logKey);
     document.getElementById('result411').innerHTML = res;
     }
 
-    function hello(name='Chris') {
-  alert(`Hello ${name}!`);
+    function hello(name = 'Chris') {
 
-    
+        var name = document.getElementById('nombresaludable').value;
+        alert(`Hello ${name}!`);
+
+        
+    }
+
+</script>
+
+<label for="textBox2">Sus teclas seran registradas</label>
+<input type="text" id="textBox">
+
+
+<script>
+// document.getElementById('textBox').addEventListener('keydown', logKey);
+
+/*
+document.querySelector('[id="textBox"]').addEventListener('keydown',logKey);
+function logKey(event) {
+console.log(`You pressed "${event.key}".`);
+
 }
+*/
+
+// ejemplo de funcion anonima
+//document.querySelector('[id="textBox"]').addEventListener('keydown', function(event) { console.log(`You pressed "${event.key}".`);})
+
+// ejemplo de arrow function
+
+document.querySelector('[id="textBox"]').addEventListener('keydown', (event) => {
+console.log(`You pressed "${event.key}".`);
+})
 </script>
 
     </div>
