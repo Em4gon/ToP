@@ -49,7 +49,7 @@ function replazar(){
 
 function reverseCaps(){
     texto = document.getElementById("textoMAYMIN").innerHTML;
-    result = '';
+    let result = '';
     for (let letra of texto){
       if (letra == letra.toUpperCase()){
         result += letra.toLowerCase();

@@ -326,23 +326,77 @@
 <script>
 // document.getElementById('textBox').addEventListener('keydown', logKey);
 
-/*
+/*      la misma funcion pero con la funcion logKey aparte
 document.querySelector('[id="textBox"]').addEventListener('keydown',logKey);
 function logKey(event) {
 console.log(`You pressed "${event.key}".`);
-
 }
+
 */
 
 // ejemplo de funcion anonima
-//document.querySelector('[id="textBox"]').addEventListener('keydown', function(event) { console.log(`You pressed "${event.key}".`);})
-
+/*
+document.querySelector('[id="textBox"]').addEventListener('keydown', function(event) { console.log(`You pressed "${event.key}".`);})
+*/
 // ejemplo de arrow function
 
 document.querySelector('[id="textBox"]').addEventListener('keydown', (event) => {
 console.log(`You pressed "${event.key}".`);
 })
+/*
+Ejemplo de arrow function que devuelve algo y tiene solo una linea 
+
+const originals = [1, 2, 3];
+
+const doubled = originals.map((item) => item * 2);
+
+que es lo mismo que:
+
+function doubleItem(item) {
+  return item * 2;
+}
+
+*/
 </script>
+
+<input id="textBox23" type="text"></input>
+<div id="output"></div>
+
+<script>
+    const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+
+textBox23.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
+
+function showMessage(from, text = "no text given") {
+    text = text || 'empty';    //o esto en vez de declararlo en la funcion
+    console.log( from + ": " + text );
+}
+
+showMessage("Ann");
+
+
+/*
+muestra numeros primos
+*/
+
+function showPrimes(n) {
+
+for (let i = 2; i < n; i++) {
+  if (!isPrime(i)) continue;
+
+    console.log(i);  // a prime
+}
+}
+
+function isPrime(n) {
+for (let i = 2; i < n; i++) {
+  if ( n % i == 0) return false;
+}
+return true;
+}
+</script>
+
 
     </div>
     
