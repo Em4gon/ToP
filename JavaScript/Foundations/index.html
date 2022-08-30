@@ -373,9 +373,27 @@ function showMessage(from, text = "no text given") {
     console.log( from + ": " + text );
 }
 
-showMessage("Ann");
 
 
+function showMessage2(from, text = anotherFunction(from)) {
+  // anotherFunction() only executed if no text given
+  // its result becomes the value of text
+
+    
+     text === undefined ? null : console.log( from + ": " + text );
+
+}
+
+function anotherFunction(from){
+    console.log("no messaje found from: ",from)
+}
+
+
+showMessage2("Emanuel");
+
+
+</script>
+<script>
 /*
 muestra numeros primos
 */
@@ -395,7 +413,134 @@ for (let i = 2; i < n; i++) {
 }
 return true;
 }
+
+// let age = prompt("What is your age?", 18);
+// let welcome = (age < 18) ?
+//   () => alert('Hello!') :
+//   () => alert("Greetings!");
+// welcome();
+
+
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// function showOk() {
+//   alert( "You agreed. >:D" );
+// }
+
+// function showCancel() {
+//   alert( "You canceled the execution." );
+// }
+
+// // usage: functions showOk, showCancel are passed as arguments to ask
+// ask("Do you agree duDE?", showOk, showCancel);
+
+
+// We can use Function Expressions to write an equivalent, shorter function:
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+// ask(
+//   "Do you agree?",
+//   function() { alert("You agreed."); }, //anonymous function
+//   function() { alert("You canceled the execution."); } //anonymous function
+// );
+
+// Function Declaration
+// a function, declared as a separate statement, in the main code flow:
+function sum1(a, b) {
+  return a + b;
+}
+
+//Function expression
+//a function, created inside an expression or inside another syntax construct. Here, the function is created on the right side of the “assignment expression” =:
+let sum2 = function(a, b) {
+  return a + b;
+};
+
+
+//using a function expression with ? operator
+
+/*
+let age = prompt("What is your age?", 18);
+
+let welcome = (age < 18) ?
+  function() { alert("Hello!"); } :
+  function() { alert("Greetings!"); };
+
+  welcome();
+*/
+
+/*
+
+When to choose Function Declaration versus Function Expression?
+
+As a rule of thumb, when we need to declare a function, the first thing to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
+
+That’s also better for readability, as it’s easier to look up function f(…) {…} in the code than let f = function(…) {…};. Function Declarations are more “eye-catching”.
+
+…But if a Function Declaration does not suit us for some reason, or we need a conditional declaration (we’ve just seen an example), then Function Expression should be used.
+
+
+*/
+
+/*
+Arrow function in function expression
+
+let func = (arg1, arg2, ..., argN) => expression;
+
+is the shorter version of:
+
+let func = function(arg1, arg2, ..., argN) {
+  return expression;
+};
+*/
+/*
+If there are no arguments, los parentesis igual tienen que estar
+
+let sayHi = () => alert("Hello!");
+
+pero si es solo un argumento estos no son necesarios
+
+let double = n => n * 2;
+
+ejemplo de mas arriba con ?
+
+let age = prompt("What is your age?", 18);
+
+let welcome = (age < 18) ?
+  () => alert('Hello!') :
+  () => alert("Greetings!");
+
+welcome();
+*/
+
+/*Multiline arrow functions
+
+se pueden usar curly braces para escribir multiples lineas, a lo que se requerira un return
+
+let sum = (a, b) => {  // the curly brace opens a multiline function
+  let result = a + b;
+  return result; // if we use curly braces, then we need an explicit "return"
+};
+
+
+*/
+
+//funcion de linea 443 reescrita
+let ask = (question, yes, no) => (confirm(question)) ? yes() : no();
+
+ask(
+  "Do you agree?",
+  () => alert("You agreed. HAHAHA"), //anonymous function
+  () => alert("You canceled the executIONNNN.")  //anonymous function
+);
 </script>
+
 
 
     </div>
