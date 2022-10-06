@@ -10,7 +10,44 @@
     <script>
         let add7 = n => n+7;
         let multiply = (n1,n2) => n1*n2;
-        
+        let capitaliza = palabra => palabra.toLowerCase().charAt(0).toUpperCase() + palabra.slice(1).toLowerCase() + " pete";
+        let lastLetter = word => word.slice(-1);
+        let answer = parseInt(prompt("Escribe un numero al que se le hará FizzBuzz"));
+        FizzBuzz(answer);
+        function FizzBuzz(answer){
+        /*
+        When a user inputs a number
+        Loop from 1 to the entered number
+        If the current number is divisible by 3 then print "Fizz"
+        If the current number is divisible by 5 then print "Buzz"
+        If the current number is divisible by 3 and 5 then print "FizzBuzz"
+        Otherwise print the current number
+        */
+        for (let i = 1; i <= answer; i++) {
+            if (i%3 == 0 && i%5 == 0){
+                console.log("FizzBuzz");
+            }else if(i%3 == 0){
+                console.log("Fizz");
+            }else if (i%5 == 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+        }
+
+        const a = 5;
+        const b = 10;
+
+        function add() {
+        return c;
+        }
+
+        function print() {
+        add();
+        }
+
+print();
     </script>
 </body>
 </html>
