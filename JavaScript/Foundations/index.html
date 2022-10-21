@@ -15,7 +15,7 @@
         function makeGreen(){
             const p = document.querySelector('p');
             p.style.color = '#BADA55';
-            p.style.fontSize = '50px';
+            p.style.fontSize = '30px';
         }
 
 
@@ -530,6 +530,13 @@ let sum = (a, b) => {  // the curly brace opens a multiline function
 
 
 */
+/*
+FUNCION MOLESTA QUE APARECIA AL INICIO
+
+
+
+
+
 
 //funcion de linea 443 reescrita
 let ask = (question, yes, no) => (confirm(question)) ? yes() : no();
@@ -539,6 +546,7 @@ ask(
   () => alert("You agreed. HAHAHA"), //anonymous function
   () => alert("You canceled the executIONNNN.")  //anonymous function
 );
+*/
 </script>
 
 <label for="search">Search by contact name: </label>
@@ -546,6 +554,9 @@ ask(
 <button id="btncontact">Search</button>
 
 <p id="pcontact"></p>
+
+
+
 
 <script>
     const contacts = ['Bian:341512312','Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
@@ -569,10 +580,53 @@ btncontact.addEventListener('click', () => {
    paracontact.textContent = 'Contact not found.';
  }
 });
-
 </script>
 
+<div class=".output">
+    <button id="button_countdown">Initiate countdown</button>
+</div>
+<script>
+document.getElementById('output').addEventListener('click',countdown);
 
+const outputCountdown = document.querySelector('.output');
+output.innerHTML = '';
+
+function countdown(){
+    for (let i = 10; index > 0; index--) {
+        const para = document.createElement('p');
+    if (i=10) {
+        para.textContent = "Countdown to 10";
+
+    } else{
+        if(i!=0){
+            para.textContent = i;
+
+        } else {
+            para.textContent = "Blast off!";
+
+        }
+    }
+        output.appendChild(para);
+            
+        }
+}
+
+// while (i >= 0) {
+//   const para = document.createElement('p');
+//   if (i === 10) {
+//     para.textContent = `Countdown ${i}`;
+//   } else if (i === 0) {
+//     para.textContent = 'Blast off!';
+//   } else {
+//     para.textContent = i;
+//   }
+
+//   output.appendChild(para);
+
+//   i--;
+// }
+
+</script>
     </div>
     
    
